@@ -59,7 +59,16 @@ fun main() {
  * Пользователь задает время в часах, минутах и секундах, например, 8:20:35.
  * Рассчитать время в секундах, прошедшее с начала суток (30035 в данном случае).
  */
-fun seconds(hours: Int, minutes: Int, seconds: Int): Int = TODO()
+fun seconds(hours: Int, minutes: Int, seconds: Int): Int {
+    val sec = hours*3600 + minutes*60 + seconds
+    println(sec)
+    return sec
+}
+
+
+fun main() {
+    seconds(14, 15, 13)
+}
 
 /**
  * Тривиальная
@@ -76,7 +85,19 @@ fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double = TODO()
  * Пользователь задает угол в градусах, минутах и секундах (например, 36 градусов 14 минут 35 секунд).
  * Вывести значение того же угла в радианах (например, 0.63256).
  */
-fun angleInRadian(deg: Int, min: Int, sec: Int): Double = TODO()
+import kotlin.math.PI
+
+fun angleInRadian(deg: Int, min: Int, sec: Int): Double {
+
+    val radian = deg*(PI/180) + min*(PI/(180*60)) + sec*(PI/(180*3600))
+    println(radian)
+    return radian
+}
+
+
+fun main() {
+    angleInRadian(11, 15, 30)
+}
 
 /**
  * Тривиальная
